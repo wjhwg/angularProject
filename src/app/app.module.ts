@@ -9,6 +9,7 @@ import { SearchComponent } from './search/search.component';
 import { StarComponent } from './star/star.component';
 import { ProductComponent } from './product/product.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarouselComponent } from './carousel/carousel.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxEchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

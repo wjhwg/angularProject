@@ -10,6 +10,8 @@ import { StarComponent } from './star/star.component';
 import { ProductComponent } from './product/product.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { HomeComponent } from './home/home.component';
+import { Code404Component } from './code404/code404.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NgxEchartsModule } from 'ngx-echarts';
     SearchComponent,
     StarComponent,
     ProductComponent,
-    CarouselComponent
+    CarouselComponent,
+    HomeComponent,
+    Code404Component
   ],
   imports: [
     BrowserModule,

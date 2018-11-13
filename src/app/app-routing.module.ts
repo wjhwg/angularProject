@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '', component: HomeComponent
   },
   {
-    path: 'product', component: ProductComponent
+    path: 'product/:name', component: ProductComponent
   },
   {
     path: '**', component: Code404Component

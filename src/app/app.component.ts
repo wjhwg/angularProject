@@ -9,6 +9,6 @@ export class AppComponent {
   constructor(private router: Router) { }
   title = 'myAngular';
   routerMethod() {
-    this.router.navigate(['/product']);
+    this.router.navigate(['/product','dapang']);
   }
 }

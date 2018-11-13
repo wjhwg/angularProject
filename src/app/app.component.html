@@ -16,6 +16,6 @@
 </div>
 <app-footer></app-footer>
 <a [routerLink]="['/']" style="float: left;">主页</a>
-<a [routerLink]="['/product']">产品详情</a>
+<a [routerLink]="['/product','hwg']" [queryParams]='{id: 1}'>产品详情</a>
 <input type="button" (click)="routerMethod()" value="产品"/>
 <router-outlet></router-outlet>

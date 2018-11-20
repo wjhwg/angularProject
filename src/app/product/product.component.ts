@@ -13,12 +13,12 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
     //参数快照
-    this.activeId = this.active.snapshot.queryParams['id'];
-    this.name = this.active.snapshot.params['name'];
+   // this.activeId = this.active.snapshot.queryParams['id'];
+  //  this.name = this.active.snapshot.params['name'];
     //参数订阅
-    this.active.params.subscribe((params: Params) => {
-      this.name = params['name']
-    })
+   // this.active.params.subscribe((params: Params) => {
+ //     this.name = params['name']
+   // })
   }
 
 }

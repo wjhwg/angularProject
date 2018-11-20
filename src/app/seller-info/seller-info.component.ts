@@ -11,7 +11,7 @@ export class SellerInfoComponent implements OnInit {
   constructor(private router: ActivatedRoute) { }
 
   ngOnInit() {
-    this.sellerId = this.router.snapshot.queryParams['id'];
+
   }
 
 }

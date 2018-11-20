@@ -1,23 +1,9 @@
 <app-navbar></app-navbar>
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <app-search></app-search>
-    </div>
-    <div class="col-md-9">
-      <div class="row">
-          <app-carousel></app-carousel>
-      </div>
-      <div class="row">
-          <app-product></app-product>
-      </div>
-    </div>
-  </div>
-</div>
-<app-footer></app-footer>
+
 <div>
-<a [routerLink]="['']" style="float: left;">主页</a>
-<a [routerLink]="['/product','hwg']" [queryParams]='{id: 1}'>产品</a>
-<input type="button" (click)="routerMethod()" value="产品"/>
+<a [routerLink]="['footer']">底部</a>
+<a [routerLink]="[{outlets: {primary: 'footer', outx: 'seller'}}]">seller</a>
+<a [routerLink]="[{outlets: {outx: null}}]">sellers</a>
 </div>
 <router-outlet></router-outlet>
+<router-outlet name="outx"></router-outlet>

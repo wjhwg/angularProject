@@ -12,6 +12,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { HomeComponent } from './home/home.component';
 import { Code404Component } from './code404/code404.component';
+import { SellerInfoComponent } from './seller-info/seller-info.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { Code404Component } from './code404/code404.component';
     ProductComponent,
     CarouselComponent,
     HomeComponent,
-    Code404Component
+    Code404Component,
+    SellerInfoComponent,
+    ProductInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,6 @@
 
 <div class="container">
-  <hr>
-  <footer>
-    <div class="row">
-      <div class="col-lg-12">
-        <p>个人angular项目</p>
-        <div echarts [options]="chartOption" class="demo-chart"></div>
-      </div>
-    </div>
-  </footer>
-<a  [routerLink]="['./']">产品页面</a>
-<a  [routerLink]="['./seller', '99a']">产品详情页面</a>
-<router-outlet></router-outlet>
+  <h4>{{product.title}}</h4>
+  <h4>{{product.price}}</h4>
+  <h4>{{product.desc}}</h4>
 </div>

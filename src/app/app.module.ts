@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -13,7 +11,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { HomeComponent } from './home/home.component';
 import { Code404Component } from './code404/code404.component';
 import { SellerInfoComponent } from './seller-info/seller-info.component';
-import { ProductInfoComponent } from './product-info/product-info.component';
+import { ProductsService } from './shared/products.service';
+
 
 @NgModule({
   declarations: [
@@ -26,15 +25,13 @@ import { ProductInfoComponent } from './product-info/product-info.component';
     CarouselComponent,
     HomeComponent,
     Code404Component,
-    SellerInfoComponent,
-    ProductInfoComponent
+    SellerInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgxEchartsModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

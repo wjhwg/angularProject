@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { Code404Component } from './code404/code404.component';
 import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { ProductsService } from './shared/products.service';
+import { LoggerService } from './shared/logger.service';
+import { AnotherProductsService } from './shared/another-products.service';
 
 
 @NgModule({
@@ -31,7 +33,21 @@ import { ProductsService } from './shared/products.service';
     BrowserModule,
     NgxEchartsModule
   ],
-  providers: [ProductsService],
+  providers: [{
+    provide: ProductsService, useFactory: (logger: LoggerService, Dev) => {
+      // let logger = new LoggerService();
+      let dev = Math.random() > 0.5;
+      if (Dev.isDev) {
+        return new ProductsService(logger);
+      } else {
+        return new AnotherProductsService(logger);
+      }
+    }, deps: [LoggerService,"IS_CONFIG"]
+  }, LoggerService, {
+      provide: "IS_CONFIG", useValue: {
+        isDev: true
+      }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

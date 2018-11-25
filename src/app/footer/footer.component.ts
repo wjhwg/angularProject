@@ -6,9 +6,9 @@ import { AnotherProductsService } from '../shared/another-products.service';
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
-  providers: [{
-    provide: ProductsService, useClass: AnotherProductsService
-  }]
+  // providers: [{
+  //   provide: ProductsService, useClass: AnotherProductsService
+  // }]
 })
 export class FooterComponent implements OnInit {
 

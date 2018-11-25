@@ -6,7 +6,7 @@ import { LoggerService } from './logger.service';
 })
 export class ProductsService {
 
-  constructor(private logger: LoggerService) {
+  constructor(public logger: LoggerService) {
   }
   getProduct(): Product {
       this.logger.log('hello world!')

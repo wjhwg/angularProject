@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { ProductsService, Product } from './products.service';
+import { LoggerService } from './logger.service';
 
 
 
 @Injectable()
 export class AnotherProductsService implements ProductsService{
-  // getProduct() : Product {
-  //   return new Product(1, 'xiaomi', 5678, 'good!')
-  // }
-  getProduct() : Product {
-    return new Product(1, 'iphone5',500, '最新款！');
+  constructor(public logger: LoggerService) {
   }
-  constructor() { }
+  getProduct(): Product {
+    this.logger.log('hello');
+      return new Product(1, 'iphonex',6000, '最新款！');
+    }
+
+
+
 }

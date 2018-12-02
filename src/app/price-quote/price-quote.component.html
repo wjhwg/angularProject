@@ -3,3 +3,6 @@
 </h2>
 <div>代码： {{stockCode}}</div>
 <div>价格 {{price | number: '2.2-2' }}</div>
+<div>
+  <input type="button" (click)="buyStock($event)" value="立即购买"/>
+</div>

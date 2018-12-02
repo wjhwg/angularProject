@@ -11,6 +11,9 @@ export class PriceQuoteComponent implements OnInit {
 
   @Output()
   lastPrice: EventEmitter<PriceQuote> = new EventEmitter();
+
+  @Output()
+  buy: EventEmitter<PriceQuote> = new EventEmitter();
   constructor() {
     setInterval(() => {
       let priceQuote: PriceQuote = new PriceQuote(this.stockCode, 1000 * Math.random());
@@ -19,7 +22,9 @@ export class PriceQuoteComponent implements OnInit {
       this.lastPrice.emit(priceQuote);
     }, 1000)
    }
-
+  buyStock(data) {
+    this.buy.emit(new PriceQuote(this.stockCode, this.price));
+  }
   ngOnInit() {
   }
 

@@ -37,7 +37,8 @@ import { PriceQuoteComponent } from './price-quote/price-quote.component';
   imports: [
     BrowserModule,
     NgxEchartsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{
     provide: ProductsService, useFactory: (logger: LoggerService, Dev) => {

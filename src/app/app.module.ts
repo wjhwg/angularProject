@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -14,6 +15,7 @@ import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { ProductsService } from './shared/products.service';
 import { LoggerService } from './shared/logger.service';
 import { AnotherProductsService } from './shared/another-products.service';
+import { MysonComponent } from './myson/myson.component';
 
 
 @NgModule({
@@ -27,11 +29,13 @@ import { AnotherProductsService } from './shared/another-products.service';
     CarouselComponent,
     HomeComponent,
     Code404Component,
-    SellerInfoComponent
+    SellerInfoComponent,
+    MysonComponent
   ],
   imports: [
     BrowserModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    FormsModule
   ],
   providers: [{
     provide: ProductsService, useFactory: (logger: LoggerService, Dev) => {

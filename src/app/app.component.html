@@ -4,10 +4,19 @@
     <h1>
     我是父组件
     </h1>
+    <div>代码： {{priceQuote.stockCode}}</div>
+    <div>价格 {{priceQuote.lastPrice | number: '2.2-2' }}</div>
   </div>
 <hr>
   <div>
     <h2>我是子组件</h2>
     <input type="text" placeholder="请输入内容" [(ngModel)]="stock">
     <app-myson [sendStock]="stock" [sendAmount]="1000000000"></app-myson>
+  </div>
+<hr>
+  <div>
+    <h1>
+      代码组件
+    </h1>
+    <app-price-quote (lastPrice)="priceQuoteHander($event)"></app-price-quote>
   </div>

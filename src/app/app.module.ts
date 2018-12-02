@@ -16,6 +16,7 @@ import { ProductsService } from './shared/products.service';
 import { LoggerService } from './shared/logger.service';
 import { AnotherProductsService } from './shared/another-products.service';
 import { MysonComponent } from './myson/myson.component';
+import { PriceQuoteComponent } from './price-quote/price-quote.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MysonComponent } from './myson/myson.component';
     HomeComponent,
     Code404Component,
     SellerInfoComponent,
-    MysonComponent
+    MysonComponent,
+    PriceQuoteComponent
   ],
   imports: [
     BrowserModule,
